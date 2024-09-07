@@ -1,8 +1,19 @@
 # HandicapAutomation
-Web-Automation-Project-using-Python-Selenium-and-Pytest
+### Web-Automation-Project-using-Python-Selenium-and-Pytest
 
+Command to run the project...
 
-Used Packages in this Project
+    pytest -v -s testCases/test_login.py
+
+command to run in the specific browser...
+
+    pytest -v -s testCases/test_login.py --browser firefox
+
+Command to run the project with report...
+
+    pytest -v -s --html=Reports\report.html testCases/test_login.py
+
+#### Used Packages in this Project...
 
 Appium-Python-Client	3.2.1	4.1.0
 
@@ -101,3 +112,5 @@ urllib3	2.2.2	2.2.2
 webdriver-manager	4.0.2	4.0.2
 websocket-client	1.8.0	1.8.0
 wsproto	1.2.0	1.2.0
+
+ini 241.18034.82

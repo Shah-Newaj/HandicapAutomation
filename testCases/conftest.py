@@ -37,9 +37,13 @@ def browser(request):  # This will return the browser value to the setup method
 #     config._metadata['Module Name'] = 'Login Test Automation'
 #     config._metadata['Tester'] = 'Shah Newaj'
 
+def pytest_html_results_summary(prefix, summary, postfix):
+    prefix.extend([f"Project Name: Handicap Automation",
+                   f"Module Name: Login Test Automation",
+                   f"Tester: Shah Newaj"])
 
 # Its is hook for delete/Modify Environment Info to the HTML Report
-@pytest.mark.optionalhook
+@pytest.hookimpl(optionalhook=True)
 def pytest_metadata(metadata):
     metadata.pop("JAVA_HOME", None)
     metadata.pop("Plugins", None)

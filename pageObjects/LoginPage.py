@@ -5,6 +5,8 @@ class LoginPage:
     txt_loginUserName = "username"
     txt_loginPassword = "password"
     btn_login = "//button[@type='submit']"
+    toggle = "(//a[@class='dropdown-toggle active'])[1]"
+    btn_logout = "(//a[normalize-space()='Logout'])[1]"
 
     def __init__(self,driver):
         self.driver = driver
@@ -19,3 +21,7 @@ class LoginPage:
 
     def clickLogin(self):
         self.driver.find_element(By.XPATH, self.btn_login).click()
+
+    def clickLogout(self):
+        self.driver.find_element(By.XPATH, self.toggle).click()
+        self.driver.find_element(By.XPATH, self.btn_logout).click()

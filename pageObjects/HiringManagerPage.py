@@ -26,7 +26,7 @@ class HiringManager:
     txt_comment_id = "comments"
     btn_save_draft_name = "save"
     btn_confirm_submit_name = "save_and_update"
-    action_btn_edit_xpath = "//tr[@id='33']//i[@class='fa fa-edit']"  # Must Change RecruitmentRequest ID in every run
+    action_btn_edit_xpath = "(//i[@class='fa fa-edit'])[1]"  # Must Change RecruitmentRequest ID in every run
 
     def __init__(self, driver):
         self.driver = driver
@@ -41,14 +41,19 @@ class HiringManager:
     def clickAddNew(self):
         self.driver.find_element(By.LINK_TEXT, self.btn_AddNew_link).click()
 
+    def clickEdit(self):
+        self.driver.find_element(By.XPATH, self.action_btn_edit_xpath).click()
+
     def selectProject(self, project):
         project_value = self.driver.find_element(By.ID, self.drp_project_id)
         project_name = Select(project_value)
         project_name.select_by_visible_text(project)
     def setHiringManager(self, hmanager):
+        self.driver.find_element(By.ID, self.txt_name_of_HM_id).clear()
         self.driver.find_element(By.ID, self.txt_name_of_HM_id).send_keys(hmanager)
 
     def setVacantPositiion(self, vposition):
+        self.driver.find_element(By.ID, self.txt_comment_id).clear()
         self.driver.find_element(By.ID, self.txt_vacancy_caused_id).send_keys(vposition)
 
     def selectJobDescription(self, jobdes):
@@ -57,6 +62,7 @@ class HiringManager:
         jobdescritoin_name.select_by_visible_text(jobdes)
 
     def setNumberofPosition(self, npos):
+        self.driver.find_element(By.ID, self.txt_comment_id).clear()
         self.driver.find_element(By.ID, self.txt_number_pos_id).send_keys(npos)
 
     def selectPresentEmployee(self, pemployee):
@@ -65,6 +71,7 @@ class HiringManager:
         presentemployee_name.select_by_visible_text(pemployee)
 
     def setLocation(self, location):
+        self.driver.find_element(By.ID, self.txt_comment_id).clear()
         self.driver.find_element(By.ID, self.txt_location_id).send_keys(location)
 
     def selectAppointment(self, appoinment):
@@ -79,9 +86,11 @@ class HiringManager:
         self.driver.find_element(By.ID, self.txt_job_ending_date_id).send_keys(jobenddate)
 
     def setVacancyCaused(self, vacancycaused):
+        self.driver.find_element(By.ID, self.txt_comment_id).clear()
         self.driver.find_element(By.ID, self.txt_vacancy_caused_id).send_keys(vacancycaused)
 
     def setSalaryRangeFrom(self, salaryrangefrom):
+        self.driver.find_element(By.ID, self.txt_comment_id).clear()
         self.driver.find_element(By.ID, self.txt_salary_range_from_id).send_keys(salaryrangefrom)
 
     def selectRecruitmentType(self, recruitmenttype):
@@ -95,9 +104,11 @@ class HiringManager:
         hod_name.select_by_value(hod)
 
     def setSalaryRangeTo(self, salaryrangeto):
+        self.driver.find_element(By.ID, self.txt_comment_id).clear()
         self.driver.find_element(By.ID, self.txt_salary_range_to_id).send_keys(salaryrangeto)
 
     def setComments(self, comments):
+        self.driver.find_element(By.ID, self.txt_comment_id).clear()
         self.driver.find_element(By.ID, self.txt_comment_id).send_keys(comments)
 
     def clickSubmit(self):

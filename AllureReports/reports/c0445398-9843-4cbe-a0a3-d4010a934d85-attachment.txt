@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:20 *************** Test_ddt_admin_Login *******************
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:21 *************** Verifying Login DDT Test  *******************

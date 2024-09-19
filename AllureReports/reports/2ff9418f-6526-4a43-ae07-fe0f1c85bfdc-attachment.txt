@@ -1,0 +1,7 @@
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:20 *************** Test_ddt_admin_Login *******************
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:21 *************** Verifying Login DDT Test  *******************
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:30 ************* Login succesful **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:32 ************* Starting Recruitment Request DDT **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:63 ************* Providing recruitment request info **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:87 ************* Starting Edit Recruitment Request DDT **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:117 ************* Providing edit recruitment request info **********

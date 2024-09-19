@@ -1,10 +1,10 @@
-import pytest
 import time
 from selenium.webdriver.common.by import By
 from pageObjects.LoginPage import LoginPage
 from pageObjects.HiringManagerPage import HiringManager
 from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
+
 
 class Test_Add_Recruitment_Request:
     baseURL = ReadConfig.getApplicationURL()
@@ -13,7 +13,8 @@ class Test_Add_Recruitment_Request:
 
     logger = LogGen.loggen()  # Logger
 
-    def test_addRecruitmentRequest_login(self,setup):
+
+    def test_addRecruitmentRequest(self,setup):
         self.logger.info("************* Add_Recruitment_Request **********")
         self.driver = setup
         self.driver.get(self.baseURL)
@@ -26,6 +27,7 @@ class Test_Add_Recruitment_Request:
         self.logger.info("************* Login succesful **********")
 
         self.logger.info("******* Starting Add_Recruitment_Request Test **********")
+        # self.driver = setup
         self.addreq = HiringManager(self.driver)
         self.addreq.clickRecruitmentRequest()
         self.addreq.clickHiringManager()
@@ -34,7 +36,7 @@ class Test_Add_Recruitment_Request:
         self.logger.info("************* Providing recruitment request info **********")
         self.addreq.selectProject("MEAL")
         self.addreq.setHiringManager("Abdullah")
-        self.addreq.setVacantPositiion("Sqa Automation Pytest")
+        self.addreq.setVacantPosition("Sqa Automation Pytest")
         self.addreq.selectJobDescription("Supply Chain Officer")
         self.addreq.setNumberofPosition("5")
         self.addreq.selectPresentEmployee("Yes")
@@ -45,7 +47,7 @@ class Test_Add_Recruitment_Request:
         self.addreq.setVacancyCaused("Resignation")
         self.addreq.setSalaryRangeFrom("60000")
         self.addreq.selectRecruitmentType("External Recruitment")
-        self.addreq.selecttHOD("1")
+        self.addreq.selectHOD("1")
         self.addreq.setSalaryRangeTo("80000")
         self.addreq.setComments("As the potential candidate are available externally, we have decided to try to find the candidate through external recruitment process first.")
         time.sleep(3)

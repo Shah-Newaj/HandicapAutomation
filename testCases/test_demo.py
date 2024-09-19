@@ -4,8 +4,7 @@ from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
 from pageObjects.HiringManagerPage import HiringManager
 
-class Test_Demo:
+class Test_Demo():
+    Test_Add_Recruitment_Request
 
-    Test_Add_Recruitment_Request.test_addRecruitmentRequest_login('self','setup')
-    Test_Add_Recruitment_Request.test_addRecruitmentRequest('self','setup')
 

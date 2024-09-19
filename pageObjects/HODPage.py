@@ -9,7 +9,7 @@ class HOD:
     action_btn_edit_xpath = "(//i[@class='fa fa-edit'])[1]"
     drp_C_HR_Manager_id = "chrm_id"
     drp_C_F_Manager_id = "cfm_id"
-    txt_comment_id = "comments"
+    txt_comment_id = "hodam_comment"
     chk_HOD_Agree_name = "hodam_status"
     btn_confirm_submit_name = "save_and_update"
 

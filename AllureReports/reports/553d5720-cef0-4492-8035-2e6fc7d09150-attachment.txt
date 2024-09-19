@@ -1,0 +1,4 @@
+[32mINFO    [0m root:test_addRecruitmentRequest.py:18 ************* Add_Recruitment_Request **********
+[32mINFO    [0m root:test_addRecruitmentRequest.py:27 ************* Login succesful **********
+[32mINFO    [0m root:test_addRecruitmentRequest.py:29 ******* Starting Add_Recruitment_Request Test **********
+[32mINFO    [0m root:test_addRecruitmentRequest.py:36 ************* Providing recruitment request info **********

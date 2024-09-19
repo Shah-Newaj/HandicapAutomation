@@ -24,13 +24,13 @@ class Test_Add_Recruitment_Request:
         self.lp.clickLogin()
         self.logger.info("************* Login succesful **********")
 
-        self.logger.info("******* Starting CHRM_Approval Test **********")
+        self.logger.info("******* Starting CFM_Approval Test **********")
         self.cfm = CFManager(self.driver)
         self.cfm.clickRecruitmentRequest()
         self.cfm.clickCFM()
         self.cfm.clickEdit()
 
-        self.logger.info("************* Providing CHRM Approval **********")
+        self.logger.info("************* Providing CFM Approval **********")
         #Scroll Down
         flag = self.driver.find_element(By.LINK_TEXT, "Handicap International")
         self.driver.execute_script("arguments[0].scrollIntoView();", flag)

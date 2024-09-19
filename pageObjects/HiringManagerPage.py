@@ -21,7 +21,7 @@ class HiringManager:
     txt_vacancy_caused_id = "vacancy_caused_due_to"
     txt_salary_range_from_id = "salary_range_from"
     drp_recruitment_type_name = "recruitment_type"
-    drp_hod_name = "hodam_id"
+    drp_hod_id = "hodam_id"
     txt_salary_range_to_id = "salary_range_to"
     txt_comment_id = "comments"
     btn_save_draft_name = "save"
@@ -52,9 +52,9 @@ class HiringManager:
         self.driver.find_element(By.ID, self.txt_name_of_HM_id).clear()
         self.driver.find_element(By.ID, self.txt_name_of_HM_id).send_keys(hmanager)
 
-    def setVacantPositiion(self, vposition):
-        self.driver.find_element(By.ID, self.txt_comment_id).clear()
-        self.driver.find_element(By.ID, self.txt_vacancy_caused_id).send_keys(vposition)
+    def setVacantPosition(self, vposition):
+        self.driver.find_element(By.ID, self.txt_position_title_id).clear()
+        self.driver.find_element(By.ID, self.txt_position_title_id).send_keys(vposition)
 
     def selectJobDescription(self, jobdes):
         jobdescription_value = self.driver.find_element(By.ID, self.drp_job_des_name)
@@ -62,7 +62,7 @@ class HiringManager:
         jobdescritoin_name.select_by_visible_text(jobdes)
 
     def setNumberofPosition(self, npos):
-        self.driver.find_element(By.ID, self.txt_comment_id).clear()
+        self.driver.find_element(By.ID, self.txt_number_pos_id).clear()
         self.driver.find_element(By.ID, self.txt_number_pos_id).send_keys(npos)
 
     def selectPresentEmployee(self, pemployee):
@@ -71,7 +71,7 @@ class HiringManager:
         presentemployee_name.select_by_visible_text(pemployee)
 
     def setLocation(self, location):
-        self.driver.find_element(By.ID, self.txt_comment_id).clear()
+        self.driver.find_element(By.ID, self.txt_location_id).clear()
         self.driver.find_element(By.ID, self.txt_location_id).send_keys(location)
 
     def selectAppointment(self, appoinment):
@@ -80,17 +80,19 @@ class HiringManager:
         appoinment_name.select_by_visible_text(appoinment)
 
     def setJobStartDate(self, jobstartdate):
+        self.driver.find_element(By.ID, self.txt_job_starting_date_id).clear()
         self.driver.find_element(By.ID, self.txt_job_starting_date_id).send_keys(jobstartdate)
 
     def setJobEndingDate(self, jobenddate):
+        self.driver.find_element(By.ID, self.txt_job_ending_date_id).clear()
         self.driver.find_element(By.ID, self.txt_job_ending_date_id).send_keys(jobenddate)
 
     def setVacancyCaused(self, vacancycaused):
-        self.driver.find_element(By.ID, self.txt_comment_id).clear()
+        self.driver.find_element(By.ID, self.txt_vacancy_caused_id).clear()
         self.driver.find_element(By.ID, self.txt_vacancy_caused_id).send_keys(vacancycaused)
 
     def setSalaryRangeFrom(self, salaryrangefrom):
-        self.driver.find_element(By.ID, self.txt_comment_id).clear()
+        self.driver.find_element(By.ID, self.txt_salary_range_from_id).clear()
         self.driver.find_element(By.ID, self.txt_salary_range_from_id).send_keys(salaryrangefrom)
 
     def selectRecruitmentType(self, recruitmenttype):
@@ -98,13 +100,13 @@ class HiringManager:
         recruitmenttype_name = Select(recruitmenttype_value)
         recruitmenttype_name.select_by_visible_text(recruitmenttype)
 
-    def selecttHOD(self, hod):
-        hod_value = self.driver.find_element(By.ID, self.drp_hod_name)
+    def selectHOD(self, hod):
+        hod_value = self.driver.find_element(By.ID, self.drp_hod_id)
         hod_name = Select(hod_value)
-        hod_name.select_by_value(hod)
+        hod_name.select_by_visible_text(hod)
 
     def setSalaryRangeTo(self, salaryrangeto):
-        self.driver.find_element(By.ID, self.txt_comment_id).clear()
+        self.driver.find_element(By.ID, self.txt_salary_range_to_id).clear()
         self.driver.find_element(By.ID, self.txt_salary_range_to_id).send_keys(salaryrangeto)
 
     def setComments(self, comments):

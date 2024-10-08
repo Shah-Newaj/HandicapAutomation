@@ -1,0 +1,16 @@
+[33mWARNING [0m selenium.webdriver.common.selenium_manager:selenium_manager.py:138 The chromedriver version (128.0.6613.84) detected in PATH at C:\Users\shah.newaj\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (129.0.6668.90); currently, chromedriver 129.0.6668.89 is recommended for chrome 129.*, so it is advised to delete the driver in PATH and retry
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:23 *************** Test_ddt_admin_Login *******************
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:24 *************** Verifying Login DDT Test  *******************
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:33 ************* Login succesful **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:35 ************* Starting Recruitment Request DDT **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:66 ************* Providing recruitment request info **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:90 ************* Starting Edit Recruitment Request DDT **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:120 ************* Providing edit recruitment request info **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:144 ******* Starting HOD_Approval Test **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:150 ************* Providing HOD Approval **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:161 ******* Starting CHRM_Approval Test **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:167 ************* Providing CHRM Approval **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:177 ******* Starting CFM_Approval Test **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:183 ************* Providing CFM Approval **********
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:193 ********** End of Recruitment Request DDT Test ************
+[32mINFO    [0m root:test_recruitmentRequest_DDT.py:194 ********* Completed Test_Recruitment_Request_DDT *********

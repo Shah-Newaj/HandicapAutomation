@@ -13,6 +13,14 @@ Command to run the project with report...
 
     pytest -v -s --html=Reports\report.html testCases/test_login.py
 
+Command to run the project with Allure Report ...
+
+    pytest -v -s --alluredir="C:\Users\shah.newaj\PycharmProjects\HandicapAutomation\AllureReports\reports" .\testCases\RecruitmentRequestDDT\test_recruitmentRequest_DDT.py
+
+Run Allure Report ...
+
+    allure serve C:\Users\shah.newaj\PycharmProjects\HandicapAutomation\AllureReports\reports
+
 #### Used Packages in this Project...
 
 Appium-Python-Client	3.2.1	4.1.0
